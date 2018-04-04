@@ -8,16 +8,3 @@ CREATE TABLE `my_project`.`tasks` (
   `topic` VARCHAR(50) NULL,
   PRIMARY KEY (`id`));
 
-
-INSERT INTO `my_project`.`tasks`
-(`id`,
-`name`,
-`type`,
-`description`,
-`topic`)
-VALUES
-('1',
-'Enum',
-'PRACTICE_TASK',
-'Create enam for marital status with the ability to find an instance of id',
-'if statement');
