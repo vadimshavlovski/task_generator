@@ -1,11 +1,14 @@
 package taskgenerator.repository;
 
 import org.springframework.stereotype.Repository;
+
 import taskgenerator.model.Task;
 import taskgenerator.model.TaskTypes;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
 import java.util.Collections;
 import java.util.List;
 
