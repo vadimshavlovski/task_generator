@@ -1,29 +1,26 @@
 package taskgenerator.repository;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+
 import taskgenerator.model.Task;
 import taskgenerator.model.TaskTypes;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
 import java.util.Collections;
 import java.util.List;
 
 @Repository
 public class TaskRepositoryImpl implements TaskRepository {
 
-    private EntityManager entityManager;
-
     @PersistenceContext
-    public void setEntityManager(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
+    private EntityManager entityManager;
 
     @Override
     public void createTask(Task task) {
         entityManager.persist(task);
-        entityManager.flush();
     }
 
     @Override
