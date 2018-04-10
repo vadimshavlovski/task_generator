@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import taskgenerator.exception.TaskNotFoundException;
 import taskgenerator.model.Mapper;
 import taskgenerator.model.Task;
 import taskgenerator.model.TaskTypes;
@@ -57,33 +58,33 @@ public class TaskRestController {
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity updateTask(@PathVariable Integer taskId, @RequestBody Task task) {
+    public Task updateTask(@PathVariable Integer taskId, @RequestBody Task task) {
         if (taskService.getTask(taskId) == null) {
-                return new ResponseEntity("No Task found for ID " + taskId, HttpStatus.NOT_FOUND);
+            throw new TaskNotFoundException(taskId.toString());
         }
         task.setId(taskId);
         taskService.updateTask(task);
-        return new ResponseEntity(task,HttpStatus.OK);
+        return task;
     }
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.PATCH, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity patchTask(@PathVariable Integer taskId, @RequestBody Task patchTask) {
+    public Task patchTask(@PathVariable Integer taskId, @RequestBody Task patchTask) {
         Task oldTask = taskService.getTask(taskId);
         if(oldTask == null){
-            return new ResponseEntity("No Task found for ID " + taskId, HttpStatus.NOT_FOUND);
+            throw new TaskNotFoundException(taskId.toString());
         }
         patchTask.setId(taskId);
         Mapper.map(oldTask, patchTask);
         taskService.updateTask(patchTask);
-        return new ResponseEntity(patchTask,HttpStatus.OK);
+        return patchTask;
     }
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity deleteTask(@PathVariable("taskId") Integer taskId) {
+    public ResponseEntity<String> deleteTask(@PathVariable("taskId") Integer taskId) {
         taskService.deleteTask(taskId);
-        return new ResponseEntity("Task with id -" + taskId + " was deleted",HttpStatus.OK);
+        return new ResponseEntity<>((String.format("Task with id %s was deleted",taskId)),HttpStatus.OK);
     }
 
 }
