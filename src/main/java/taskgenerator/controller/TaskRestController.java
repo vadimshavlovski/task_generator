@@ -57,7 +57,6 @@ public class TaskRestController {
     }
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
     public Task updateTask(@PathVariable Integer taskId, @RequestBody Task task) {
         if (taskService.getTask(taskId) == null) {
             throw new TaskNotFoundException(taskId.toString());
@@ -68,7 +67,6 @@ public class TaskRestController {
     }
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.PATCH, produces = MediaType.APPLICATION_JSON_VALUE)
-    @ResponseStatus(HttpStatus.OK)
     public Task patchTask(@PathVariable Integer taskId, @RequestBody Task patchTask) {
         Task oldTask = taskService.getTask(taskId);
         if(oldTask == null){
@@ -81,7 +79,6 @@ public class TaskRestController {
     }
 
     @RequestMapping(value = "/{taskId}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<String> deleteTask(@PathVariable("taskId") Integer taskId) {
         taskService.deleteTask(taskId);
         return new ResponseEntity<>((String.format("Task with id %s was deleted",taskId)),HttpStatus.OK);
