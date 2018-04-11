@@ -45,6 +45,7 @@ public class TaskRestController {
 
     @RequestMapping(value = "", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
     public Task addTask(@RequestBody Task task) {
         taskService.createTask(task);
         return task;
