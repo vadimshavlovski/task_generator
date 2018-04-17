@@ -1,6 +1,6 @@
 package taskgenerator.model;
 
-public enum TaskTypes {
+public enum TaskType {
     EXERCISE,
     QUESTION;
 }

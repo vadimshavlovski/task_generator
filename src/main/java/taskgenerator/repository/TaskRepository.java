@@ -1,7 +1,7 @@
 package taskgenerator.repository;
 
 import taskgenerator.model.Task;
-import taskgenerator.model.TaskTypes;
+import taskgenerator.model.TaskType;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ public interface TaskRepository {
 
     void deleteTask(int taskId);
 
-    List<Task> getAllTasksByType(TaskTypes type);
+    List<Task> getAllTasksByType(TaskType type);
 
-    List<Task> getAllTasksByTypeAndTopic(TaskTypes type, String topic);
+    List<Task> getAllTasksByTypeAndTopic(TaskType type, String topic);
 
     List<String> getAllTopics();
 }

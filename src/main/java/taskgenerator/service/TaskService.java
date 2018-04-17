@@ -1,7 +1,7 @@
 package taskgenerator.service;
 
 import taskgenerator.model.Task;
-import taskgenerator.model.TaskTypes;
+import taskgenerator.model.TaskType;
 import taskgenerator.model.TopicWrapper;
 
 import java.util.List;
@@ -16,13 +16,13 @@ public interface TaskService {
 
     void deleteTask(int taskId);
 
-    List<Task> getAllTaskByType(TaskTypes type);
+    List<Task> getAllTaskByType(TaskType type);
 
-    List<Task> getAllTaskByTypeAndTopic(TaskTypes type, String topic);
+    List<Task> getAllTaskByTypeAndTopic(TaskType type, String topic);
 
-    Task getRandomTask(TaskTypes type);
+    Task getRandomTask(TaskType type);
 
-    Task getRandomTaskByTypeAndTopics(TaskTypes type, List<String> topics);
+    Task getRandomTaskByTypeAndTopics(TaskType type, List<String> topics);
 
     TopicWrapper getAllTopics();
 }

@@ -3,7 +3,7 @@ package taskgenerator.repository;
 import org.springframework.stereotype.Repository;
 
 import taskgenerator.model.Task;
-import taskgenerator.model.TaskTypes;
+import taskgenerator.model.TaskType;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -44,7 +44,7 @@ public class TaskRepositoryImpl implements TaskRepository {
 
     // using jpa query
     @Override
-    public List<Task> getAllTasksByType(TaskTypes type) {
+    public List<Task> getAllTasksByType(TaskType type) {
         Query query = entityManager.createQuery(
                 "SELECT tasks FROM Task tasks WHERE type = :type", Task.class);
         query.setParameter("type", type);
@@ -53,7 +53,7 @@ public class TaskRepositoryImpl implements TaskRepository {
 
     // using native query
     @Override
-    public List<Task> getAllTasksByTypeAndTopic(TaskTypes type, String topic) {
+    public List<Task> getAllTasksByTypeAndTopic(TaskType type, String topic) {
         Query query = entityManager.createNativeQuery(
                 "select * from tasks where type = ? and topic = ?", Task.class);
         query.setParameter(1, type.toString());

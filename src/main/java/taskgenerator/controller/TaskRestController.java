@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import taskgenerator.exception.TaskNotFoundException;
 import taskgenerator.model.Mapper;
 import taskgenerator.model.Task;
-import taskgenerator.model.TaskTypes;
+import taskgenerator.model.TaskType;
 import taskgenerator.model.TopicWrapper;
 import taskgenerator.service.TaskService;
 
@@ -35,12 +35,12 @@ public class TaskRestController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public List<Task> getTasksByType(@RequestParam String taskType) {
-        return taskService.getAllTaskByType(TaskTypes.valueOf(taskType));
+        return taskService.getAllTaskByType(TaskType.valueOf(taskType));
     }
 
     @RequestMapping(value = "/random", method = RequestMethod.GET)
     public Task getRandomTask(@RequestParam String taskType) {
-        return taskService.getRandomTask(TaskTypes.valueOf(taskType));
+        return taskService.getRandomTask(TaskType.valueOf(taskType));
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST,
