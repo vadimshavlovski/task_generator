@@ -23,12 +23,12 @@ public class Task implements Serializable {
 
     @Column(name = "type")
     @Enumerated(EnumType.STRING)
-    private TaskTypes type;
+    private TaskType type;
 
     public Task() {
     }
 
-    public Task(int id, String name, String description, String topic, TaskTypes type) {
+    public Task(int id, String name, String description, String topic, TaskType type) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -68,11 +68,11 @@ public class Task implements Serializable {
         this.topic = topic;
     }
 
-    public TaskTypes getType() {
+    public TaskType getType() {
         return type;
     }
 
-    public void setType(TaskTypes type) {
+    public void setType(TaskType type) {
         this.type = type;
     }
 

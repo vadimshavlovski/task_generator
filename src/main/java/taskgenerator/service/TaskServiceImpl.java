@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import taskgenerator.model.Task;
-import taskgenerator.model.TaskTypes;
+import taskgenerator.model.TaskType;
 import taskgenerator.model.TopicWrapper;
 import taskgenerator.repository.TaskRepository;
 
@@ -44,24 +44,24 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<Task> getAllTaskByType(TaskTypes type) {
+    public List<Task> getAllTaskByType(TaskType type) {
         return taskRepository.getAllTasksByType(type);
     }
 
     @Override
-    public List<Task> getAllTaskByTypeAndTopic(TaskTypes type, String topic) {
+    public List<Task> getAllTaskByTypeAndTopic(TaskType type, String topic) {
         return taskRepository.getAllTasksByTypeAndTopic(type, topic);
     }
 
     @Override
-    public Task getRandomTask(TaskTypes type) {
+    public Task getRandomTask(TaskType type) {
         List<Task> tasks = getAllTaskByType(type);
         int randomValue = getRandomNumber(tasks);
         return tasks.get(randomValue);
     }
 
     @Override
-    public Task getRandomTaskByTypeAndTopics(TaskTypes type, List<String> topics) {
+    public Task getRandomTaskByTypeAndTopics(TaskType type, List<String> topics) {
         List<Task> tasks = new ArrayList<>();
         for (String topic : topics) {
             tasks.addAll(getAllTaskByTypeAndTopic(type, topic));
