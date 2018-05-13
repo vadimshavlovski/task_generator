@@ -1,4 +1,4 @@
-package taskgenerator.model;
+package taskgenerator.utils;
 
 import java.lang.reflect.Field;
 
