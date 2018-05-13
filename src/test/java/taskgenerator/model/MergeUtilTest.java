@@ -1,6 +1,7 @@
 package taskgenerator.model;
 
 import org.junit.Test;
+import taskgenerator.utils.MergeUtil;
 
 import static org.junit.Assert.*;
 

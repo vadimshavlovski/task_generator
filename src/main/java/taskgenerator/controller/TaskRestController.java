@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import taskgenerator.exception.TaskNotFoundException;
-import taskgenerator.model.MergeUtil;
+import taskgenerator.utils.MergeUtil;
 import taskgenerator.model.Task;
 import taskgenerator.model.TaskType;
 import taskgenerator.model.TopicWrapper;
