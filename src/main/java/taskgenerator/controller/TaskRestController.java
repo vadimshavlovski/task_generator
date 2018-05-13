@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import taskgenerator.exception.TaskNotFoundException;
-import taskgenerator.model.Mapper;
+import taskgenerator.model.MergeUtil;
 import taskgenerator.model.Task;
 import taskgenerator.model.TaskType;
 import taskgenerator.model.TopicWrapper;
@@ -74,7 +74,7 @@ public class TaskRestController {
             throw new TaskNotFoundException(taskId.toString());
         }
         patchTask.setId(taskId);
-        Mapper.map(oldTask, patchTask);
+        MergeUtil.merge(oldTask, patchTask);
         taskService.updateTask(patchTask);
         return patchTask;
     }
