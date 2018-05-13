@@ -1,13 +1,13 @@
-package taskgenerator.model;
+package taskgenerator.utils;
 
 import java.lang.reflect.Field;
 
-public class Mapper {
+public class MergeUtil {
 
-    private Mapper() {
+    private MergeUtil() {
     }
 
-    public static <T> void map(T oldObject, T patchObject) {
+    public static <T> void merge(T oldObject, T patchObject) {
         try {
             Field[] privateFields = oldObject.getClass().getDeclaredFields();
             for (Field field : privateFields) {
