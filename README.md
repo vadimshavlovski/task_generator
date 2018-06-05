@@ -23,7 +23,7 @@ It is a simple web application for tasks generation :sunglasses: :sunny:
     
    ![questions](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/questions.png)
    
-   There is in-place editing feature (was used PATCH method of REST API):
+   There is in-place editing feature (the PATCH method of REST API was used):
    
    ![in_place_editing](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/in_place_editing.png)
    
