@@ -10,18 +10,25 @@ It is a simple web application for tasks generation :sunglasses: :sunny:
 
 ### User Interface
 
-1. Random Task Generator page:
+**1. Random Task Generator page:**
 
     **Generate tasks** button generates one question and exercise that are taken from DB randomly 
 
-![task_generator](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/task_generator.png)
+   ![task_generator](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/task_generator.png)
 
-2. Questions page:
+
+**2. Questions page:**
 
     Page for adding, modifying and deleting **questions**
- ![questions](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/questions.png)
+    
+   ![questions](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/questions.png)
+   
+   There is in-place editing feature (PATCH method of REST API):
+   
+   
  
- 3. Exercises
+ **3. Exercises:**
  
     Page for adding, modifying and deleting **exercises**
- ![exercises](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/exercises.png)
+    
+   ![exercises](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/exercises.png)
