@@ -1,5 +1,5 @@
 ### Application
-It is a simple web application for tasks generation ☺
+It is a simple web application for tasks generation :sunglasses: :sunny:
 
 ### Technologies
 - Java 8
