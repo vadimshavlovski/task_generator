@@ -28,7 +28,7 @@ It is a simple web application for tasks generation :sunglasses: :sunny:
    ![in_place_editing](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/in_place_editing.png)
    
  
- **3. Exercises:**
+ **3. Exercises page:**
  
    Page for adding, modifying and deleting **exercises**
     
