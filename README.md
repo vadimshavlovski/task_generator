@@ -14,22 +14,22 @@ It is a simple web application for tasks generation :sunglasses: :sunny:
 
    **Generate tasks** button generates one question and exercise that are taken from DB randomly 
 
-   ![task_generator](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/task_generator.png)
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/task_generator.png" width="700">
 
 
 **2. Questions page:**
 
    Page for adding, modifying and deleting **questions**
     
-   ![questions](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/questions.png)
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/questions.png" width="700">
    
    There is in-place editing feature (the PATCH method of REST API was used):
    
-   ![in_place_editing](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/in_place_editing.png)
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/in_place_editing.png" width="700">
    
  
  **3. Exercises page:**
  
    Page for adding, modifying and deleting **exercises**
     
-   ![exercises](https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/exercises.png)
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/webapp/resources/images/exercises.png" width="700">
