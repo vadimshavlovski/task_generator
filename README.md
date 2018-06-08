@@ -8,6 +8,20 @@ It is a simple web application for tasks generation :sunglasses: :sunny:
 - MySql
 - jQery, Ajax
 
+### REST API
+
+CRUD API + */random?taskType={taskType}*  endpoint:
+
+| URI                             | Method     | Description                            |
+| ---------------------           | ----       | ------------------------               |
+|*/tasks/{taskId}*                | **GET**    | Get  task by id                        | 
+|*/tasks/*                        | **POST**   | Add new task                           | 
+|*/tasks/{taskId}*                | **PUT**    | Modify task by id                      | 
+|*/tasks/{taskId}*                | **PATCH**  | Merge task by id                       | 
+|*/tasks/{taskId}*                | **DELETE** | Delete task by id                      | 
+|*/random?taskType={taskType}*    | **GET**    | Get random task by task type (exercise or question)| 
+|                                 |            |                                        |  
+
 ### User Interface
 
 **1. Random Task Generator page:**
