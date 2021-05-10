@@ -34,15 +34,15 @@ CRUD API + */random?taskType={taskType}*  endpoint:
 
    Page for adding, modifying and deleting **questions**
     
-   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/images/questions.png" width="700">
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/static/images/questions.png" width="700">
    
    There is in-place editing feature (the PATCH method of REST API was used):
    
-   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/images/in_place_editing.png" width="700">
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/static/images/in_place_editing.png" width="700">
    
  
  **3. Exercises page:**
  
    Page for adding, modifying and deleting **exercises**
     
-   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/images/exercises.png" width="700">
+   <img src="https://github.com/vadimshavlovski/task_generator/blob/master/src/main/resources/static/images/exercises.png" width="700">
