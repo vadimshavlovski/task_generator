@@ -8,18 +8,18 @@
 <head>
     <meta charset="utf-8">
 
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/dashboard.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/css/daterangepicker-bs3.css" rel="stylesheet">
 
     <title>Random task generator</title>
 
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/vendor/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/moment.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/daterangepicker.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/vendor/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/moment.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/daterangepicker.js"></script>
 
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function() {
@@ -49,7 +49,7 @@
                 // get random question
                 $.ajax({
                     type: 'get',
-                    url: '/task_generator/tasks/random?taskType=QUESTION',
+                    url: '/tasks/random?taskType=QUESTION',
                     dataType: 'json',
                     timeout: 600000,
                     success: function (data) {
@@ -67,7 +67,7 @@
                 //get random exercise
                 $.ajax({
                     type: 'get',
-                    url: '/task_generator/tasks/random?taskType=EXERCISE',
+                    url: '/tasks/random?taskType=EXERCISE',
                     dataType: 'json',
                     timeout: 600000,
                     success: function (data) {
@@ -168,6 +168,6 @@
          </div>
     </div>
 </div>
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

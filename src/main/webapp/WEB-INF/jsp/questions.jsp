@@ -8,18 +8,18 @@
 <head>
     <meta charset="utf-8">
 
-    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/dataTables.bootstrap.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/dashboard.css" rel="stylesheet">
-    <link href="${pageContext.request.contextPath}/resources/css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/css/daterangepicker-bs3.css" rel="stylesheet">
 
     <title>Questions</title>
 
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/vendor/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/moment.min.js"></script>
-    <script type="text/javascript" language="javascript" src="${pageContext.request.contextPath}/resources/js/daterangepicker.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/vendor/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/moment.min.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/daterangepicker.js"></script>
 
 </head>
 <body>
@@ -256,7 +256,7 @@
 
             $.ajax({
                     type: 'delete',
-                    url: '/task_generator/tasks/' + row_id,
+                    url: '/tasks/' + row_id,
                     dataType: 'json',
                     timeout: 5000,
                     async: false,

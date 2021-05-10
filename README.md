@@ -2,10 +2,9 @@
 It is a simple web application for tasks generation :sunglasses: :sunny: 
 
 ### Technologies
-- Java 8
-- Hibernate 5
-- Spring Framework  4 (DI & IoC, MVC)
-- MySql
+- Java 11
+- Spring  (Boot, MVC, Data)
+- PostgreSQL
 - jQery, Ajax
 
 ### REST API
